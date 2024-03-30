@@ -33,7 +33,7 @@ const CharacterList = () => {
             </div>
           </div>
 
-          <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
+          <div className="list-wrapper">
             {characters?.map((character) => {
               return <CharacterRow key={character.id} character={character} />;
             })}

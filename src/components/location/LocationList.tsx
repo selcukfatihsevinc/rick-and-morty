@@ -30,7 +30,7 @@ const LocationList = () => {
             </div>
           </div>
 
-          <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
+          <div className="list-wrapper">
             {locations?.map((location) => {
               return <LocationRow key={location.id} location={location} />;
             })}

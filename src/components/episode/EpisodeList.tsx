@@ -21,7 +21,7 @@ const EpisodeList = () => {
 
       {!loading && (
         <>
-          <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
+          <div className="list-wrapper">
             {episodes?.map((episode) => {
               return <EpisodeRow key={episode.id} episode={episode} />;
             })}
