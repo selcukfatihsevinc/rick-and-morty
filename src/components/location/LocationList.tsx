@@ -21,13 +21,9 @@ const LocationList = () => {
 
       {!loading && (
         <>
-          <div className="flex justify-end px-3 space-x-[15px] mb-2">
-            <div className="w-[100px] text-left text-sm font-semibold">
-              Type
-            </div>
-            <div className="w-[120px] text-left text-sm font-semibold">
-              Dimension
-            </div>
+          <div className="table-header">
+            <div className="w-[100px] table-header-cell">Type</div>
+            <div className="w-[120px] table-header-cell">Dimension</div>
           </div>
 
           <div className="list-wrapper">

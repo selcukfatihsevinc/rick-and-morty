@@ -21,16 +21,10 @@ const CharacterList = () => {
 
       {!loading && (
         <>
-          <div className="flex justify-end px-3 space-x-[15px] mb-2">
-            <div className="w-[80px] text-left text-sm font-semibold">
-              Species
-            </div>
-            <div className="w-[120px] text-left text-sm font-semibold">
-              Origin
-            </div>
-            <div className="w-[120px] text-left text-sm font-semibold">
-              Location
-            </div>
+          <div className="table-header">
+            <div className="w-[80px] table-header-cell">Species</div>
+            <div className="w-[120px] table-header-cell">Origin</div>
+            <div className="w-[120px] table-header-cell">Location</div>
           </div>
 
           <div className="list-wrapper">

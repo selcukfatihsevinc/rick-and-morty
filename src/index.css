@@ -27,3 +27,11 @@ a {
 .list-wrapper {
   @apply border border-gray-200 rounded-md divide-gray-200 divide-y;
 }
+
+.table-header {
+  @apply flex justify-end px-3 space-x-[15px] mb-2;
+}
+
+.table-header-cell {
+  @apply text-left text-sm font-semibold;
+}
