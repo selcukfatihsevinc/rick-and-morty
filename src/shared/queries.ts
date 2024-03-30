@@ -116,6 +116,7 @@ export const SINGLE_EPISODE_QUERY = gql`
       characters {
         id
         name
+        image
       }
     }
   }
@@ -160,6 +161,7 @@ export const SINGLE_LOCATION_QUERY = gql`
       residents {
         id
         name
+        image
       }
     }
   }

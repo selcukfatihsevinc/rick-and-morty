@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { useParams, Link } from "react-router-dom";
 
 import { SINGLE_CHARACTER_QUERY, TCharacter } from "../../shared/queries";
+import EpisodeRow from "../episode/EpisodeRow";
 
 const CharacterDetail = () => {
   let { id } = useParams();
@@ -68,23 +69,9 @@ const CharacterDetail = () => {
                 Episodes
               </h2>
 
-              <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
+              <div className="list-wrapper">
                 {character?.episode?.map((episode) => {
-                  return (
-                    <div className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 rounded-md group">
-                      <Link
-                        to={`/episode/${episode.id}`}
-                        className="font-semibold space-x-[10px]"
-                      >
-                        <span className="text-gray-400">
-                          {episode?.episode}
-                        </span>
-                        <span className="group-hover:underline ">
-                          {episode?.name}
-                        </span>
-                      </Link>
-                    </div>
-                  );
+                  return <EpisodeRow key={episode.id} episode={episode} />;
                 })}
               </div>
             </div>

@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 import { TCharacter } from "../../shared/queries";
 
-const CharacterRow = ({ character }: { character: TCharacter }) => {
+const CharacterRow = ({ character }: { character: Partial<TCharacter> }) => {
   return (
-    <div className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 rounded-md group">
+    <div className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 group">
       <div className="flex flex-row items-center">
         <img
           src={character.image}
@@ -25,10 +25,10 @@ const CharacterRow = ({ character }: { character: TCharacter }) => {
         {/* <div>{character.type}</div> */}
         {/* <div>{character.gender}</div> */}
         <div className="w-[120px] truncate text-left">
-          {character.origin.name}
+          {character?.origin?.name}
         </div>
         <div className="w-[120px] truncate text-left">
-          {character.location.name}
+          {character?.location?.name}
         </div>
       </div>
     </div>
