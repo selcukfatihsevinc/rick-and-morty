@@ -4,7 +4,7 @@ import { TEpisode } from "../../shared/queries";
 
 const EpisodeRow = ({ episode }: { episode: Partial<TEpisode> }) => {
   return (
-    <div className="p-3 flex flex-row items-center hover:bg-gray-100 group">
+    <div className="table-row">
       <Link
         to={`/episode/${episode.id}`}
         className="w-[80px] font-semibold group-hover:underline"

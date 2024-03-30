@@ -35,3 +35,7 @@ a {
 .table-header-cell {
   @apply text-left text-sm font-semibold;
 }
+
+.table-row {
+  @apply p-3 flex flex-row items-center hover:bg-gray-100;
+}

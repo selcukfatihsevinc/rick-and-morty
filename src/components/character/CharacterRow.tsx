@@ -4,7 +4,7 @@ import { TCharacter } from "../../shared/queries";
 
 const CharacterRow = ({ character }: { character: Partial<TCharacter> }) => {
   return (
-    <div className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 group">
+    <div className="table-row justify-between">
       <div className="flex flex-row items-center">
         <img
           src={character.image}

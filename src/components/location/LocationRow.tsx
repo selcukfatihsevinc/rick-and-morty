@@ -4,7 +4,7 @@ import { TLocation } from "../../shared/queries";
 
 const LocationRow = ({ location }: { location: TLocation }) => {
   return (
-    <div className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 group">
+    <div className="table-row justify-between">
       <Link
         to={`/location/${location.id}`}
         className="font-semibold group-hover:underline"
