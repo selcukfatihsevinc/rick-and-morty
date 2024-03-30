@@ -99,6 +99,17 @@ export const EPISODES_QUERY = gql`
   }
 `;
 
+export const SINGLE_EPISODE_QUERY = gql`
+  query ($id: ID!) {
+    episode(id: $id) {
+      name
+      air_date
+      episode
+      created
+    }
+  }
+`;
+
 export type TLocation = {
   id: string;
   name: string;
@@ -123,6 +134,17 @@ export const LOCATIONS_QUERY = gql`
         dimension
         created
       }
+    }
+  }
+`;
+
+export const SINGLE_LOCATION_QUERY = gql`
+  query ($id: ID!) {
+    location(id: $id) {
+      name
+      type
+      dimension
+      created
     }
   }
 `;
