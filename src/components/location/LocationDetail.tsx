@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 
 import { SINGLE_LOCATION_QUERY, TLocation } from "../../shared/queries";
 import CharacterRow from "../character/CharacterRow";
+import DetailSectionTitle from "../common/DetailSectionTitle";
 
 const LocationDetail = () => {
   let { id } = useParams();
@@ -34,10 +35,7 @@ const LocationDetail = () => {
 
           {location?.residents?.length > 0 && (
             <div className="mb-9">
-              <h2 className="text-2xl font-semibold text-gray-500 mt-9 mb-3">
-                Residents
-              </h2>
-
+              <DetailSectionTitle title="Residents" />
               <div className="list-wrapper">
                 {location?.residents?.map((resident) => {
                   return (

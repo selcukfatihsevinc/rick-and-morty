@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { SINGLE_CHARACTER_QUERY, TCharacter } from "../../shared/queries";
 import EpisodeRow from "../episode/EpisodeRow";
 import DetailInfo from "../common/DetailInfo";
+import DetailSectionTitle from "../common/DetailSectionTitle";
 
 const CharacterDetail = () => {
   let { id } = useParams();
@@ -51,10 +52,7 @@ const CharacterDetail = () => {
 
           {character?.episode?.length > 0 && (
             <div className="mb-9">
-              <h2 className="text-2xl font-semibold text-gray-500 mt-9 mb-3">
-                Episodes
-              </h2>
-
+              <DetailSectionTitle title="Episodes" />
               <div className="list-wrapper">
                 {character?.episode?.map((episode) => {
                   return <EpisodeRow key={episode.id} episode={episode} />;
