@@ -81,7 +81,7 @@ export type TLocation = {
   id: string;
   name: string;
   type: string;
-  dimensionepisode: string;
+  dimension: string;
   created: string;
 };
 

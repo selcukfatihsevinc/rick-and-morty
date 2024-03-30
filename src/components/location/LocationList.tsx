@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 
 import Layout from "../Layout";
 import { LOCATIONS_QUERY, TLocation } from "../../shared/queries";
@@ -20,9 +20,39 @@ const LocationList = () => {
 
       {!loading && (
         <>
-          <div>
+          <div className="flex justify-end px-3 space-x-[15px] mb-2">
+            <div className="w-[100px] text-left text-sm font-semibold">
+              Type
+            </div>
+            <div className="w-[120px] text-left text-sm font-semibold">
+              Dimension
+            </div>
+          </div>
+
+          <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
             {locations?.map((location) => {
-              return <div>{location.name}</div>;
+              return (
+                <div
+                  key={location.id}
+                  className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 rounded-md group"
+                >
+                  <Link
+                    to={`/location/${location.id}`}
+                    className="font-semibold group-hover:underline"
+                  >
+                    {location.name}
+                  </Link>
+
+                  <div className="flex flex-row items-center space-x-[15px]">
+                    <span className="w-[100px] truncate text-left">
+                      {location.type}
+                    </span>
+                    <span className="w-[120px] truncate text-left">
+                      {location.dimension}
+                    </span>
+                  </div>
+                </div>
+              );
             })}
           </div>
 
