@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Hero from "./shared/Hero";
-import Tabs from "./shared/Tabs";
+import Hero from "./common/Hero";
+import Tabs from "./common/Tabs";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
