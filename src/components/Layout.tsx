@@ -1,7 +1,15 @@
 import { ReactNode } from "react";
+import Hero from "./shared/Hero";
+import Tabs from "./shared/Tabs";
 
 const Layout = ({ children }: { children: ReactNode }) => {
-  return <div className={`h-full w-full`}>{children}</div>;
+  return (
+    <div className={`h-full max-w-[800px] mx-auto`}>
+      <Hero />
+      <Tabs />
+      <div>{children}</div>
+    </div>
+  );
 };
 
 export default Layout;

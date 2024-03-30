@@ -19,3 +19,7 @@ code {
 a {
   text-decoration: none;
 }
+
+.tab-active {
+  @apply font-bold;
+}
