@@ -4,7 +4,7 @@ const Tabs = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="flex flex-row space-x-[12px]">
+    <div className="flex flex-row space-x-[12px] mb-6">
       <Link
         to="/characters"
         className={["/", "/characters"].includes(pathname) ? "tab-active" : ""}

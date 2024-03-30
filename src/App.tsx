@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import CharacterList from "./components/character/CharacterDetail";
-import CharacterDetail from "./components/character/CharacterList";
+
+import CharacterList from "./components/character/CharacterList";
+import CharacterDetail from "./components/character/CharacterDetail";
 import EpisodeList from "./components/episode/EpisodeList";
 import EpisodeDetail from "./components/episode/EpisodeDetail";
 import LocationList from "./components/location/LocationList";

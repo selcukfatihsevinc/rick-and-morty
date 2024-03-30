@@ -1,7 +1,7 @@
 import Layout from "../Layout";
 
-const CharacterList = () => {
-  return <Layout>CharacterList</Layout>;
+const CharacterDetail = () => {
+  return <Layout>CharacterDetail</Layout>;
 };
 
-export default CharacterList;
+export default CharacterDetail;
