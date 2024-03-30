@@ -27,7 +27,7 @@ const EpisodeList = () => {
             })}
           </div>
 
-          {episodes.length > 0 && (
+          {episodes?.length > 0 && (
             <Pagination
               prev={pagination?.prev}
               next={pagination?.next}

@@ -33,7 +33,7 @@ const CharacterList = () => {
             })}
           </div>
 
-          {characters.length > 0 && (
+          {characters?.length > 0 && (
             <Pagination
               prev={pagination?.prev}
               next={pagination?.next}

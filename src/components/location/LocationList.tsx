@@ -32,7 +32,7 @@ const LocationList = () => {
             })}
           </div>
 
-          {locations.length > 0 && (
+          {locations?.length > 0 && (
             <Pagination
               prev={pagination?.prev}
               next={pagination?.next}
