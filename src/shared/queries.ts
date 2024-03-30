@@ -16,6 +16,7 @@ export type TCharacter = {
   created: string;
   origin: Partial<TOrigin>;
   location: Partial<TLocation>;
+  episode: Partial<TEpisode>[];
 };
 
 export const CHARACTERS_QUERY = gql`
@@ -64,6 +65,11 @@ export const SINGLE_CHARACTER_QUERY = gql`
       }
       location {
         id
+        name
+      }
+      episode {
+        id
+        episode
         name
       }
       created

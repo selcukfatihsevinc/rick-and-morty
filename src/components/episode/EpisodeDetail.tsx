@@ -19,7 +19,7 @@ const EpisodeDetail = () => {
       {!loading && (
         <>
           <Link to="/episodes" className="h-[40px] flex items-center">
-            {"<"} back
+            {"<"} Episodes
           </Link>
 
           <div className="flex flex-row items-center pt-[80px] pb-[30px]">

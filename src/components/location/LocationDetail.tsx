@@ -18,8 +18,8 @@ const LocationDetail = () => {
 
       {!loading && (
         <>
-          <Link to="/episodes" className="h-[40px] flex items-center">
-            {"<"} back
+          <Link to="/locations" className="h-[40px] flex items-center">
+            {"<"} Locations
           </Link>
 
           <div className="flex flex-row items-center pt-[80px] pb-[30px]">

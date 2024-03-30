@@ -18,8 +18,11 @@ const CharacterDetail = () => {
 
       {!loading && (
         <>
-          <Link to="/characters" className="h-[40px] flex items-center">
-            {"<"} back
+          <Link
+            to="/characters"
+            className="h-[40px] flex items-center font-medium"
+          >
+            {"<"} Characters
           </Link>
 
           <div className="flex flex-row items-center pt-[80px] pb-[30px]">
@@ -58,6 +61,34 @@ const CharacterDetail = () => {
               <span>{character.location.name}</span>
             </div>
           </div>
+
+          {character?.episode?.length > 0 && (
+            <div className="mb-9">
+              <h2 className="text-2xl font-semibold text-gray-500 mt-9 mb-3">
+                Episodes
+              </h2>
+
+              <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
+                {character?.episode?.map((episode) => {
+                  return (
+                    <div className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 rounded-md group">
+                      <Link
+                        to={`/episode/${episode.id}`}
+                        className="font-semibold space-x-[10px]"
+                      >
+                        <span className="text-gray-400">
+                          {episode?.episode}
+                        </span>
+                        <span className="group-hover:underline ">
+                          {episode?.name}
+                        </span>
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </>
       )}
     </div>
