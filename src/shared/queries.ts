@@ -83,6 +83,7 @@ export type TEpisode = {
   air_date: string;
   episode: string;
   created: string;
+  characters: Partial<TCharacter>[];
 };
 
 export const EPISODES_QUERY = gql`
@@ -112,6 +113,10 @@ export const SINGLE_EPISODE_QUERY = gql`
       air_date
       episode
       created
+      characters {
+        id
+        name
+      }
     }
   }
 `;
