@@ -1,10 +1,11 @@
 import { useQuery } from "@apollo/client";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import Layout from "../Layout";
 import { LOCATIONS_QUERY, TLocation } from "../../shared/queries";
 import { TPagination } from "../../shared/types";
 import Pagination from "../common/Pagination";
+import LocationRow from "./LocationRow";
 
 const LocationList = () => {
   const [searchParams] = useSearchParams();
@@ -31,28 +32,7 @@ const LocationList = () => {
 
           <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
             {locations?.map((location) => {
-              return (
-                <div
-                  key={location.id}
-                  className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 rounded-md group"
-                >
-                  <Link
-                    to={`/location/${location.id}`}
-                    className="font-semibold group-hover:underline"
-                  >
-                    {location.name}
-                  </Link>
-
-                  <div className="flex flex-row items-center space-x-[15px]">
-                    <span className="w-[100px] truncate text-left">
-                      {location.type}
-                    </span>
-                    <span className="w-[120px] truncate text-left">
-                      {location.dimension}
-                    </span>
-                  </div>
-                </div>
-              );
+              return <LocationRow key={location.id} location={location} />;
             })}
           </div>
 
