@@ -49,6 +49,28 @@ export const CHARACTERS_QUERY = gql`
   }
 `;
 
+export const SINGLE_CHARACTER_QUERY = gql`
+  query ($id: ID!) {
+    character(id: $id) {
+      name
+      species
+      status
+      type
+      gender
+      image
+      origin {
+        id
+        name
+      }
+      location {
+        id
+        name
+      }
+      created
+    }
+  }
+`;
+
 export type TEpisode = {
   id: string;
   name: string;

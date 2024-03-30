@@ -33,38 +33,38 @@ const CharacterList = () => {
           </div>
 
           <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
-            {characters?.map((characater) => {
+            {characters?.map((character) => {
               return (
                 <div
-                  key={characater.id}
+                  key={character.id}
                   className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 rounded-md group"
                 >
                   <div className="flex flex-row items-center">
                     <img
-                      src={characater.image}
-                      alt={characater.name}
+                      src={character.image}
+                      alt={character.name}
                       width={40}
                       className="rounded-md mr-[10px]"
                     />
                     <Link
-                      to={`/character/${characater.id}`}
+                      to={`/character/${character.id}`}
                       className="font-semibold group-hover:underline"
                     >
-                      {characater.name}
+                      {character.name}
                     </Link>
                   </div>
                   <div className="flex flex-row items-center space-x-[15px]">
-                    {/* <div>{characater.status}</div> */}
+                    {/* <div>{character.status}</div> */}
                     <div className="w-[80px] truncate text-left">
-                      {characater.species}
+                      {character.species}
                     </div>
-                    {/* <div>{characater.type}</div> */}
-                    {/* <div>{characater.gender}</div> */}
+                    {/* <div>{character.type}</div> */}
+                    {/* <div>{character.gender}</div> */}
                     <div className="w-[120px] truncate text-left">
-                      {characater.origin.name}
+                      {character.origin.name}
                     </div>
                     <div className="w-[120px] truncate text-left">
-                      {characater.location.name}
+                      {character.location.name}
                     </div>
                   </div>
                 </div>
