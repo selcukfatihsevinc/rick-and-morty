@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 
 import { SINGLE_CHARACTER_QUERY, TCharacter } from "../../shared/queries";
 import EpisodeRow from "../episode/EpisodeRow";
+import DetailInfo from "../common/DetailInfo";
 
 const CharacterDetail = () => {
   let { id } = useParams();
@@ -37,30 +38,15 @@ const CharacterDetail = () => {
           </div>
 
           <div className="border border-gray-200 rounded-md p-6">
-            <div className="flex flex-row">
-              <span className="font-semibold w-[80px]">Status:</span>
-              <span>{character.status}</span>
-            </div>
-            <div className="flex flex-row">
-              <span className="font-semibold w-[80px]">Species:</span>
-              <span>{character.species}</span>
-            </div>
-            <div className="flex flex-row">
-              <span className="font-semibold w-[80px]">Type:</span>
-              <span>{character.type}</span>
-            </div>
-            <div className="flex flex-row">
-              <span className="font-semibold w-[80px]">Gender:</span>
-              <span>{character.gender}</span>
-            </div>
-            <div className="flex flex-row">
-              <span className="font-semibold w-[80px]">Origin:</span>
-              <span>{character.origin.name}</span>
-            </div>
-            <div className="flex flex-row">
-              <span className="font-semibold w-[80px]">Location:</span>
-              <span>{character.location.name}</span>
-            </div>
+            <DetailInfo title="Status" value={character.status} />
+            <DetailInfo title="Species" value={character.species} />
+            <DetailInfo title="Type" value={character.type} />
+            <DetailInfo title="Gender" value={character.gender} />
+            <DetailInfo title="Origin" value={String(character.origin.name)} />
+            <DetailInfo
+              title="Location"
+              value={String(character.location.name)}
+            />
           </div>
 
           {character?.episode?.length > 0 && (
