@@ -1,5 +1,10 @@
 import { gql } from "@apollo/client";
 
+export type TOrigin = {
+  id: string;
+  name: string;
+};
+
 export type TCharacter = {
   id: string;
   name: string;
@@ -9,6 +14,8 @@ export type TCharacter = {
   gender: string;
   image: string;
   created: string;
+  origin: Partial<TOrigin>;
+  location: Partial<TLocation>;
 };
 
 export const CHARACTERS_QUERY = gql`
@@ -27,16 +34,12 @@ export const CHARACTERS_QUERY = gql`
         species
         type
         gender
+        image
         origin {
           id
           name
         }
         location {
-          id
-          name
-        }
-        image
-        episode {
           id
           name
         }
