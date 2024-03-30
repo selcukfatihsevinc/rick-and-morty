@@ -127,6 +127,7 @@ export type TLocation = {
   type: string;
   dimension: string;
   created: string;
+  residents: Partial<TCharacter>[];
 };
 
 export const LOCATIONS_QUERY = gql`
@@ -156,6 +157,10 @@ export const SINGLE_LOCATION_QUERY = gql`
       type
       dimension
       created
+      residents {
+        id
+        name
+      }
     }
   }
 `;

@@ -28,9 +28,30 @@ const LocationDetail = () => {
             </div>
           </div>
 
-          <div className="border border-gray-200 rounded-md p-6 hidden">
-            location data
-          </div>
+          {location?.residents?.length > 0 && (
+            <div className="mb-9">
+              <h2 className="text-2xl font-semibold text-gray-500 mt-9 mb-3">
+                Residents
+              </h2>
+
+              <div className="border border-gray-200 rounded-md divide-gray-200 divide-y">
+                {location?.residents?.map((resident) => {
+                  return (
+                    <div className="p-3 flex flex-row items-center justify-between hover:bg-gray-100 rounded-md group">
+                      <Link
+                        to={`/character/${resident.id}`}
+                        className="font-semibold space-x-[10px]"
+                      >
+                        <span className="group-hover:underline ">
+                          {resident?.name}
+                        </span>
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </>
       )}
     </div>
